@@ -15,9 +15,9 @@
   <div class="container mt-4">
     <div class="row">
       <div class="col-md-3"> 
-        <div class="card bg-success shadow-sm border-light">
+        <div class="card bg-primary shadow-sm border-light">
           <div class="card-body ">
-            <h5 class="card-title bg-success text-white">Hi, <?= $this->session->userdata("first_name"); ?></h5>
+            <h5 class="card-title bg-primary text-white">Hi, <?= $this->session->userdata("first_name"); ?></h5>
           </div>
           <ul class="list-group list-group-flush">
             <li class="list-group-item"><?= $this->session->userdata("email"); ?></li>

@@ -13,7 +13,7 @@
             </h6>
             <p><small>created <?= date("D, d M Y", strtotime($project->created)); ?></small></p>
             <div class="btn-group">
-              <button type="button" class="btn btn-success dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+              <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
                 <i class="bi bi-gear-fill"></i>
               </button>
               <ul class="dropdown-menu">

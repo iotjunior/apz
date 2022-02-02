@@ -1,7 +1,7 @@
-<nav class="navbar navbar-expand-lg shadow navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg shadow navbar-dark bg-primary">
   <div class="container-fluid">
     <a class="navbar-brand text-light" href="<?= site_url('project'); ?>">
-      <span class="fw-bold">IoTInventor.org</span>
+      <span class="fw-bold">IoT Junior</span>
       <span class="fw-light fs-6">(beta)</span>
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -62,13 +62,13 @@
       </ul>
       <div class="d-flex">
         <?php if ( $controller === 'project' || $controller === "dashboard" ): ?>
-          <button class="btn btn-success fw-bold" data-bs-toggle="modal" data-bs-target="#modalCreateProject">New Project</button>
+          <button class="btn btn-primary fw-bold" data-bs-toggle="modal" data-bs-target="#modalCreateProject">New Project</button>
         <?php endif; ?>
         <?php if ( $controller === 'webserial' ): ?>
           <button class="btn btn-outline-secondary fw-bold" >Refresh</button>
           &nbsp;
           &nbsp;
-          <button class="btn btn-success fw-bold" id="openSerial">Open Serial</button>
+          <button class="btn btn-primary fw-bold" id="openSerial">Open Serial</button>
         <?php endif; ?>
       </div>
     </div>
@@ -90,7 +90,7 @@
             <input type="text" class="form-control" name="title" placeholder="My ESP32 Project">
           </div>
           <div class="mb-3">
-            <a class="btn btn-outline-light btn-sm text-success" data-bs-toggle="collapse" href="#boardOptions" role="button" aria-expanded="false" aria-controls="collapseExample">
+            <a class="btn btn-outline-light btn-sm text-primary" data-bs-toggle="collapse" href="#boardOptions" role="button" aria-expanded="false" aria-controls="collapseExample">
               <i class="bi bi-caret-right-fill"></i> Board options
             </a>
           </div>
@@ -107,7 +107,7 @@
             </div>
           </div>
           <div class="mb-3">
-            <button type="submit" class="btn btn-success">Create</button>
+            <button type="submit" class="btn btn-primary">Create</button>
           </div>
           </form>
         </div>
