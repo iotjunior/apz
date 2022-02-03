@@ -9,7 +9,7 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-      <?php if ( empty($this->session->userdata('is_authenticated')) ): ?>
+        <?php if ( empty($this->session->userdata('is_authenticated')) ): ?>
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="<?= site_url('auth'); ?>">Sign In</a>
         </li>
@@ -30,6 +30,13 @@
               <li><a class="dropdown-item" href="<?= site_url('auth/signout'); ?>">Keluar</a></li>
             </ul>
           </li>
+        <?php endif ?>
+        <?php if ( $controller === "app" ): ?>
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="#">
+            <i class="bi bi-cpu"></i> <?= $project->title ?> / <?= $project->board_name ?>
+          </a>
+        </li>
         <?php endif ?>
       </ul>
       <div class="d-flex">
