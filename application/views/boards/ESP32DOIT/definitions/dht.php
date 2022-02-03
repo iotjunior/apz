@@ -2,7 +2,7 @@
 Blockly.Blocks['dht_begin'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField("dht.begin")
+        .appendField("dht begin")
         .appendField(new Blockly.FieldDropdown([["DHT11","DHT11"], ["DHT22","DHT22"], ["DHT21","DHT21"]]), "type");
     this.appendValueInput("pin")
         .setCheck("Number")
@@ -19,7 +19,7 @@ Blockly.Blocks['dht_begin'] = {
 Blockly.Blocks['dht_read_humidity'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField("dht.readHumidity");
+        .appendField("dht read humidity");
     this.setOutput(true, "Number");
     this.setColour(120);
  this.setTooltip("");
@@ -31,7 +31,7 @@ Blockly.Blocks['dht_read_humidity'] = {
 Blockly.Blocks['dht_read_temperature'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField("dht.readTemperature (°C)");
+        .appendField("dht read temperature (°C)");
     this.setOutput(true, "Number");
     this.setColour(120);
  this.setTooltip("");
@@ -43,7 +43,7 @@ Blockly.Blocks['dht_read_temperature'] = {
 Blockly.Blocks['dht_read_temperature_fahrenheit'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField("dht.readTemperature (℉)");
+        .appendField("dht read temperature (℉)");
     this.setOutput(true, "Number");
     this.setColour(120);
  this.setTooltip("");
@@ -56,7 +56,7 @@ Blockly.Blocks['dht_compute_head_index'] = {
   init: function() {
     this.appendValueInput("f")
         .setCheck("Number")
-        .appendField("dht.computeHeatIndex (℉)");
+        .appendField("dht compute heat index (℉)");
     this.appendValueInput("h")
         .setCheck("Number")
         .appendField("humidity");
@@ -73,7 +73,7 @@ Blockly.Blocks['dht_compute_head_index_celsius'] = {
   init: function() {
     this.appendValueInput("c")
         .setCheck("Number")
-        .appendField("dht.computeHeatIndex (°C)");
+        .appendField("dht compute heat index (°C)");
     this.appendValueInput("h")
         .setCheck("Number")
         .appendField("humidity");

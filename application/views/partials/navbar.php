@@ -2,7 +2,7 @@
   <div class="container-fluid">
     <a class="navbar-brand text-light" href="<?= site_url(''); ?>">
       <span class="fw-bold">IoTJunior</span>
-      <span class="fw-light fs-6">1.0.0</span>
+      <span class="fw-light fs-6">App</span>
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -34,7 +34,7 @@
         <?php if ( $controller === "app" ): ?>
         <li class="nav-item">
           <a class="nav-link" aria-current="page" href="#">
-            <i class="bi bi-cpu"></i> <?= $project->title ?> / <?= $project->board_name ?>
+            <?= $project->title ?> <i class="bi bi-cpu"></i> <?= $project->board_name ?>
           </a>
         </li>
         <?php endif ?>
