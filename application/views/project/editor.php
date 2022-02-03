@@ -22,14 +22,13 @@
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Compile to Microcontroller</h5>
+          <h5 class="modal-title" id="exampleModalLabel">Compile ke Microcontroller</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
           <p class="fs-5">
-            Launch the IoT Inventor Plugin on your computer and 
-            then use this code to compile and upload directly 
-            to your microcontroller.
+            Buka aplikasi IoTJunior Plugin di komputer kamu dan salin kode untuk 
+            mengkompilasi mikrokontroler.
           </p>
           <p class="fs-3 text-primary text-center" id="pCode"></p>
         </div>
