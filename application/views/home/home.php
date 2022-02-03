@@ -70,7 +70,7 @@
                 </a>
                 <?php endif; ?>
                 <?php if ($publication->link_tutorial === NULL): ?>
-                <button title="This project does not have a tutorial!" class="btn btn-sm btn-secondary disabled">
+                <button title="This project does not have a tutorial!" class="btn btn-sm btn-primary disabled">
                   Tutorial
                 </button>
                 <?php endif; ?>
