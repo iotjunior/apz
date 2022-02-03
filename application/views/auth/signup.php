@@ -36,7 +36,7 @@
                   <input type="text" name="last_name" class="form-control" placeholder="Last name" aria-label="Last name">
                 </div>
               </div>
-              <button type="submit" class="btn btn-success fw-bold">Sign Up</button>
+              <button type="submit" class="btn btn-primary fw-bold">Sign Up</button>
               <a href="<?= site_url('auth'); ?>" class="btn btn-light">Back to sign in</a>
             </form>
           </div>

@@ -20,55 +20,41 @@
               Profile
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown1">
-              <li><a class="dropdown-item" href="<?= site_url('dashboard'); ?>">My Dashboard</a></li>
-              <li><a class="dropdown-item" href="<?= site_url('project/list'); ?>">My Projects</a></li>
-              <li><a class="dropdown-item" href="<?= site_url('publication/list'); ?>">My Publications</a></li>
+              <li><a class="dropdown-item" href="<?= site_url('dashboard'); ?>">Dashboard</a></li>
+              <li><a class="dropdown-item" href="<?= site_url('project/list'); ?>">Project Saya</a></li>
+              <li><a class="dropdown-item" href="<?= site_url('publication/list'); ?>">Publikasi Saya</a></li>
               <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="<?= site_url(''); ?>">Publication Hub</a></li>
+              <li><a class="dropdown-item" href="<?= site_url(''); ?>">Komunitas</a></li>
               <li><a class="dropdown-item" target="_blank" href="<?= site_url('webserial'); ?>">Web Serial</a></li>
               <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="<?= site_url('auth/logout'); ?>">Sign out</a></li>
+              <li><a class="dropdown-item" href="<?= site_url('auth/logout'); ?>">Keluar</a></li>
             </ul>
           </li>
         <?php endif ?>
-        <?php if ( $controller === 'app' ): ?>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            File
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" id="linkSave" onclick="save()" href="#">Save</a></li>
-            <li><a class="dropdown-item"id="linkConnect" href="#">Run</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item"id="linkConnect" href="<?= site_url('project'); ?>">Exit editor</a></li>
-          </ul>
-        </li>
-        <?php endif ?>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Help
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" target="_blank" href="https://iotinventor.org/docs/">Documentation</a></li>
-            <li><a class="dropdown-item" target="_blank" href="https://app.iotinventor.org/assets/iotinventor-plugin.exe">Download Plugin</a></li>
-            <!-- <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Feedback</a></li> -->
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" target="_blank" href="https://forms.gle/M84C64e5GGdbTyT87">Report an Issue</a></li>
-            <!-- <li><a class="dropdown-item" href="#">About</a></li> -->
-          </ul>
-        </li>
-        <li class="nav-item"></li>
       </ul>
       <div class="d-flex">
         <?php if ( $controller === 'project' || $controller === "dashboard" ): ?>
-          <button class="btn btn-primary fw-bold" data-bs-toggle="modal" data-bs-target="#modalCreateProject">New Project</button>
+          <button class="btn btn-primary fw-bold" data-bs-toggle="modal" data-bs-target="#modalCreateProject">Buat Project</button>
         <?php endif; ?>
         <?php if ( $controller === 'webserial' ): ?>
           <button class="btn btn-outline-secondary fw-bold" >Refresh</button>
           &nbsp;
           &nbsp;
           <button class="btn btn-primary fw-bold" id="openSerial">Open Serial</button>
+        <?php endif; ?>
+        <?php if ( $controller === 'app' ): ?>
+          <div class="btn-group" role="group" aria-label="Basic example">
+            <a href="<?= site_url('project'); ?>" class="btn btn-secondary text-light">
+              <i class="bi bi-x-square"></i>
+            </a>
+            <button type="button" title="Connect" class="btn btn-danger text-light" id="linkConnect">
+              <i class="bi bi-cloud-arrow-down"></i>
+            </button>
+            <button id="linkSave" onclick="save()" title="Simpan project" type="button" class="btn btn-danger text-light">
+              <i class="bi bi-save2"></i>
+            </button>
+          </div>
+        
         <?php endif; ?>
       </div>
     </div>
@@ -80,18 +66,18 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">New Project</h5>
+          <h5 class="modal-title" id="exampleModalLabel">Buat Project</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
           <form action="<?= site_url("project/create"); ?>" method="post">
           <div class="mb-3">
-            <label for="exampleFormControlInput1" class="form-label">Title</label>
+            <label for="exampleFormControlInput1" class="form-label">Judul Project</label>
             <input type="text" class="form-control" name="title" placeholder="My ESP32 Project">
           </div>
           <div class="mb-3">
             <a class="btn btn-outline-light btn-sm text-primary" data-bs-toggle="collapse" href="#boardOptions" role="button" aria-expanded="false" aria-controls="collapseExample">
-              <i class="bi bi-caret-right-fill"></i> Board options
+              <i class="bi bi-caret-right-fill"></i> Pilihan board
             </a>
           </div>
           <div class="collapse" id="boardOptions">
@@ -107,7 +93,7 @@
             </div>
           </div>
           <div class="mb-3">
-            <button type="submit" class="btn btn-primary">Create</button>
+            <button type="submit" class="btn btn-primary">Simpan</button>
           </div>
           </form>
         </div>

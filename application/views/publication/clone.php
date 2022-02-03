@@ -32,7 +32,7 @@
                 <input type="text" name="title" class="form-control" value="<?= $publication->title ?>">
               </div>
               <div class="mb-3">
-                <button type="submit" class="btn btn-success">Clone</button>
+                <button type="submit" class="btn btn-primary">Clone</button>
                 <a href="<?= $_SERVER['HTTP_REFERER'] ?>" class="btn btn-light">Back</a>
               </div>
             </form>

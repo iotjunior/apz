@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <?php $this->load->view('partials/head.php'); ?>
-  <title>My Projects</title>
+  <title>Project Saya</title>
 </head>
 <body>
   <?php $this->load->view("partials/navbar.php"); ?>
@@ -22,15 +22,15 @@
             <div class="card shadow-sm">
               <div class="card-body">
                 <h5 class="card-title text-truncate">
-                  <i class="bi bi-file-earmark-code-fill"></i>
+                  <i class="bi bi-code-square"></i>
                   <?= $project->title ?>
                 </h5>
                 <h6 class="card-subtitle mb-2 text-muted ">
                   <span class=""><?= ucfirst($project->display_name) ?> </span>
                 </h6>
-                <p><small>created <?= date("D, d M Y", strtotime($project->created)); ?></small></p>
+                <p><small>Tanggal <?= date("D, d M Y", strtotime($project->created)); ?></small></p>
                 <div class="btn-group">
-                  <button type="button" class="btn btn-success dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                  <button type="button" class="btn btn-sm btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
                     <i class="bi bi-gear-fill"></i>
                   </button>
                   <ul class="dropdown-menu">

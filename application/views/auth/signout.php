@@ -14,9 +14,9 @@
   
   <main class="form-signin">
     <form method="post" action="<?= site_url('auth/process_signout'); ?>">
-      <i class="bi bi-box fs-1 text-success"></i>
+      <i class="bi bi-box fs-1 text-primary"></i>
       <h1 class="h3 mb-3 fw-normal">Are you sure to exit the program?</h1>
-      <button class="w-100 btn btn-success" type="submit">Sign out</button>
+      <button class="w-100 btn btn-primary" type="submit">Sign out</button>
       <p class="mt-5 mb-3 text-muted">&copy; 2022 IoT Inventor</p>
     </form>
   </main>

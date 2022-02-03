@@ -15,11 +15,16 @@
             <p class="text-truncate">
               <small ><?= $publication->description ?></small>
             </p>
-            <a href="<?= site_url('publication/clone/' . $publication->id) ?>" class="btn btn-primary">
+            <a href="<?= site_url('publication/clone/' . $publication->id) ?>" class="btn btn-sm btn-primary">
               Clone
             </a>
             <?php if ($publication->link_tutorial !== NULL): ?>
-            <a target="_blank" href="<?= $publication->link_tutorial ?>" class="btn btn-outline-primary">
+            <a target="_blank" href="<?= $publication->link_tutorial ?>" class="btn btn-sm btn-primary">
+              Tutorial
+            </a>
+            <?php endif; ?>
+            <?php if ($publication->link_tutorial === NULL): ?>
+            <a target="#" href="<?= $publication->link_tutorial ?>" class="btn btn-sm btn-secondary disabled">
               Tutorial
             </a>
             <?php endif; ?>

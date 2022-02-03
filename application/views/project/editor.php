@@ -31,7 +31,7 @@
             then use this code to compile and upload directly 
             to your microcontroller.
           </p>
-          <p class="fs-3 text-success text-center" id="pCode"></p>
+          <p class="fs-3 text-primary text-center" id="pCode"></p>
         </div>
       </div>
     </div>

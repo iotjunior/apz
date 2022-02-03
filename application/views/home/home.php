@@ -5,17 +5,16 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <?php $this->load->view('partials/head.php'); ?>
-  <title>IoT Inventor</title>
+  <title>IoTJunior</title>
 </head>
 <body>
   <?php $this->load->view("partials/navbar.php"); ?>
   <div class="container mt-5 mb-3">
     <div class="row d-flex justify-content-center">
       <div class="col-md-5">
-        <h1 class="display-6 text-center mb-3">IoTInventor.org</h1>
+        <h1 class="display-6 text-center mb-3">IoT Junior</h1>
         <p class="fs-small text-center">
-        Invent your own Internet of Thing project with IoTInventor. 
-        Very asy tools to use and very suitable for education and hobbies.
+          Platform edukasi Internet of Thing untuk anak-anak
         </p>
       </div>
     </div>
@@ -56,22 +55,22 @@
                   <small ><?= $publication->description ?></small>
                 </p>
                 <?php if ($this->session->userdata("is_authenticated")): ?>
-                <a href="<?= site_url('publication/clone/' . $publication->id) ?>" class="btn btn-success">
+                <a href="<?= site_url('publication/clone/' . $publication->id) ?>" class="btn btn-sm btn-primary">
                   Clone
                 </a>
                 <?php endif; ?>
                 <?php if (!$this->session->userdata("is_authenticated")): ?>
-                <a href="#" class="btn btn-secondary disabled">
+                <a href="#" class="btn btn-sm btn-secondary disabled">
                   Clone
                 </a>
                 <?php endif; ?>
                 <?php if ($publication->link_tutorial !== NULL): ?>
-                <a target="_blank" href="<?= $publication->link_tutorial ?>" class="btn btn-success">
+                <a target="_blank" href="<?= $publication->link_tutorial ?>" class="btn btn-sm btn-primary">
                   Tutorial
                 </a>
                 <?php endif; ?>
                 <?php if ($publication->link_tutorial === NULL): ?>
-                <button title="This project does not have a tutorial!" class="btn btn-secondary disabled">
+                <button title="This project does not have a tutorial!" class="btn btn-sm btn-secondary disabled">
                   Tutorial
                 </button>
                 <?php endif; ?>

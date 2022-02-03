@@ -34,11 +34,11 @@ class Publication extends MY_Controller {
       $config['next_tag_close']   = '</li>';
       $config['last_tag_open']    = '<li class="page-item">';
       $config['last_tag_close']   = '</li>';
-      $config['cur_tag_open']     = '<li class="page-item active bg-warning"><a class="page-link text-dark bg-warning border-warning">';
+      $config['cur_tag_open']     = '<li class="page-item active bg-primary"><a class="page-link text-dark bg-primary border-primary">';
       $config['cur_tag_close']    = '</a></li>';
       $config['num_tag_open']     = '<li class="page-item">';
       $config['num_tag_close']    = '</li>';
-      $config['data_page_attr']    = 'class="page-link text-dark border-warning"';
+      $config['data_page_attr']    = 'class="page-link text-dark border-primary"';
     
       $this->pagination->initialize($config); 
 
@@ -83,11 +83,11 @@ class Publication extends MY_Controller {
       $config['next_tag_close']   = '</li>';
       $config['last_tag_open']    = '<li class="page-item">';
       $config['last_tag_close']   = '</li>';
-      $config['cur_tag_open']     = '<li class="page-item active bg-warning"><a class="page-link text-dark bg-warning border-warning">';
+      $config['cur_tag_open']     = '<li class="page-item active bg-primary"><a class="page-link text-dark bg-primary border-primary">';
       $config['cur_tag_close']    = '</a></li>';
       $config['num_tag_open']     = '<li class="page-item">';
       $config['num_tag_close']    = '</li>';
-      $config['data_page_attr']    = 'class="page-link text-dark border-warning"';
+      $config['data_page_attr']    = 'class="page-link text-dark border-primary"';
     
       $this->pagination->initialize($config); 
       $page = ($this->uri->segment($config['uri_segment'])) ? $this->uri->segment($config['uri_segment']) : 0;

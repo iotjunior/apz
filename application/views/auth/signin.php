@@ -27,7 +27,7 @@
                 <label class="form-label">Password</label>
                 <input type="password" name="password" class="form-control" placeholder="**********">
               </div>
-              <button type="submit" class="btn btn-success fw-bold">Sign In</button>
+              <button type="submit" class="btn btn-primary fw-bold">Sign In</button>
               <a href="<?= site_url('auth/signup'); ?>" class="btn btn-light">Sign Up</a>
             </form>
           </div>
