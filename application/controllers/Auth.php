@@ -7,11 +7,13 @@ class Auth extends MY_Controller {
 	function __construct() {
 		parent::__construct();
 		$this->load->model('user_model');
+    $this->prevent_authentication();
 	}
 
   public function signup() {
     if ($this->input->server('REQUEST_METHOD') === 'GET') {
-      $this->load->view('auth/signup');
+      $data["controller"] = "auth";
+      $this->load->view('auth/signup', $data);
     } else {
       $user = $this->user_model->signup(
         $this->input->post('email'),
@@ -27,10 +29,10 @@ class Auth extends MY_Controller {
 
   public function index() {
     if ($this->input->server('REQUEST_METHOD') === 'GET') {
-      $this->load->view('auth/signin');
+      $data["controller"] = "auth";
+      $this->load->view('auth/signin', $data);
     } else {
       $user = $this->user_model->signin($this->input->post('email'), $this->input->post('password'));
-
       if ($user) {
         $this->session->set_userdata('email', $user->email);
         $this->session->set_userdata('first_name', $user->first_name);
