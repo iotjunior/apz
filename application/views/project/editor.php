@@ -30,7 +30,12 @@
             Buka aplikasi IoTJunior Plugin di komputer kamu dan salin kode untuk 
             mengkompilasi mikrokontroler.
           </p>
+
           <p class="fs-3 text-primary text-center" id="pCode"></p>
+
+          <button class="btn btn-sm btn-primary mt-3" data-clipboard-action="copy" data-clipboard-target="#pCode">
+            Copy text
+          </button>
         </div>
       </div>
     </div>

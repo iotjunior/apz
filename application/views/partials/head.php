@@ -3,6 +3,7 @@
 <script src="<?= base_url('assets/bootstrap5/js/bootstrap.bundle.min.js'); ?>"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.24.0/axios.min.js" integrity="sha512-u9akINsQsAkG9xjc1cnGF4zw5TFDwkxuc9vUp5dltDWYCSmyd0meygbvgXrlc/z7/o4a19Fb5V0OUE58J7dcyw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <?php if ( $controller == "app" ): ?>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.10/clipboard.min.js"></script>
   <script type="text/javascript" src="<?php echo base_url('assets/blockly/blockly/blockly_compressed.js') ?>"></script>
   <script type="text/javascript" src="<?php echo base_url('assets/blockly/blockly/blocks_compressed.js') ?>"></script>
   <script type="text/javascript" src="<?php echo base_url('assets/blockly/blockly/arduino_compressed.js') ?>"></script>
