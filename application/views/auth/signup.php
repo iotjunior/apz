@@ -10,6 +10,7 @@
   <title>Sign Up</title>
 </head>
 <body>
+  <?php $this->load->view("partials/navbar.php"); ?>
   <div class="container">
     <div class="row vh-100 d-flex justify-content-center align-items-center">
       <div class="col-md-4">

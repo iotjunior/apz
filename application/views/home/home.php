@@ -25,8 +25,8 @@
       <div class="col-md-6">
         <form action="<?= site_url('home'); ?>">
           <div class="input-group mb-3 shadow-sm">
-            <input type="text" name="search" class="form-control border-secondary" placeholder="Search projects..."  aria-describedby="button-addon2">
-            <button type="submit" class="btn btn-secondary" type="button" id="button-addon2">Search</button>
+            <input type="text" name="search" class="form-control border-secondary" placeholder="Cari publikasi..."  aria-describedby="button-addon2">
+            <button type="submit" class="btn btn-secondary" type="button" id="button-addon2">Cari</button>
           </div>
         </form>
       </div>
@@ -60,7 +60,7 @@
                 </a>
                 <?php endif; ?>
                 <?php if (!$this->session->userdata("is_authenticated")): ?>
-                <a href="#" class="btn btn-sm btn-secondary disabled">
+                <a href="#" class="btn btn-sm btn-primary disabled">
                   Clone
                 </a>
                 <?php endif; ?>

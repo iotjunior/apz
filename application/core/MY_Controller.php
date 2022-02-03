@@ -32,4 +32,10 @@ class MY_Controller extends CI_Controller
       redirect('home');
     }
   }
+
+  public function prevent_authentication() {
+    if ( $this->is_authenticated() ) {
+      redirect('dashboard');
+    }
+  }
 }

@@ -10,8 +10,11 @@ class Auth extends MY_Controller {
 	}
 
   public function signup() {
+    $this->prevent_authentication();
+
     if ($this->input->server('REQUEST_METHOD') === 'GET') {
-      $this->load->view('auth/signup');
+      $data["controller"] = "auth";
+      $this->load->view('auth/signup', $data);
     } else {
       $user = $this->user_model->signup(
         $this->input->post('email'),
@@ -26,11 +29,13 @@ class Auth extends MY_Controller {
 	}
 
   public function index() {
+    $this->prevent_authentication();
+
     if ($this->input->server('REQUEST_METHOD') === 'GET') {
-      $this->load->view('auth/signin');
+      $data["controller"] = "auth";
+      $this->load->view('auth/signin', $data);
     } else {
       $user = $this->user_model->signin($this->input->post('email'), $this->input->post('password'));
-
       if ($user) {
         $this->session->set_userdata('email', $user->email);
         $this->session->set_userdata('first_name', $user->first_name);
@@ -47,8 +52,13 @@ class Auth extends MY_Controller {
     }
   }
 
-  public function logout() {
-    $this->session->sess_destroy();
-    redirect('');
+  public function signout() {
+    if ($this->input->server('REQUEST_METHOD') === 'GET') {
+      $data["controller"] = "auth";
+      $this->load->view('auth/signout', $data);
+    } else {
+      $this->session->sess_destroy();
+      redirect('');
+    }
   }
 }

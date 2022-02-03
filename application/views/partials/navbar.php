@@ -27,14 +27,14 @@
               <li><a class="dropdown-item" href="<?= site_url(''); ?>">Komunitas</a></li>
               <li><a class="dropdown-item" target="_blank" href="<?= site_url('webserial'); ?>">Web Serial</a></li>
               <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="<?= site_url('auth/logout'); ?>">Keluar</a></li>
+              <li><a class="dropdown-item" href="<?= site_url('auth/signout'); ?>">Keluar</a></li>
             </ul>
           </li>
         <?php endif ?>
       </ul>
       <div class="d-flex">
         <?php if ( $controller === 'project' || $controller === "dashboard" ): ?>
-          <button class="btn btn-primary fw-bold" data-bs-toggle="modal" data-bs-target="#modalCreateProject">Buat Project</button>
+          <button class="btn btn-light text-primary fw-bold" data-bs-toggle="modal" data-bs-target="#modalCreateProject">Buat Project</button>
         <?php endif; ?>
         <?php if ( $controller === 'webserial' ): ?>
           <button class="btn btn-outline-secondary fw-bold" >Refresh</button>
