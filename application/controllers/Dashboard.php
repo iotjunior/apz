@@ -1,6 +1,8 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
+
+
 class Dashboard extends MY_Controller {
 	function __construct() {
 		parent::__construct();
@@ -11,6 +13,7 @@ class Dashboard extends MY_Controller {
 
   public function index() {
     $this->guard();
+    
     if ($this->input->server('REQUEST_METHOD') === 'GET') {
       // get my projects
       $data["projects"] = $this->project_model->latest($this->session->userdata('email'), 6);

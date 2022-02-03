@@ -26,7 +26,7 @@
               <button class="btn btn-outline-secondary" type="button" id="button-addon1">Send</button>
             </div>
             <div class="form-floating">
-              <textarea class="form-control border-dark bg-dark text-success" placeholder="Leave a comment here" id="textareaTerminal" style="height: 400px"></textarea>
+              <textarea class="form-control border-dark bg-dark text-info" placeholder="Leave a comment here" id="textareaTerminal" style="height: 400px"></textarea>
               <label class="text-light">Web Serial</label>
             </div>
           </div>

@@ -13,11 +13,11 @@
   
   <div class="container">
     <div class="row vh-100 d-flex justify-content-center align-items-center">
-      <div class="col-md-5">
+      <div class="col-md-4">
         <div class="card shadow">
           <img src="<?= base_url('assets/images/smarthome.png'); ?>" class="card-img-top">
           <div class="card-body">
-            <h5 class="card-title fw-bold">Sign In to IoTInventor</h5>
+            <h5 class="card-title fw-bold">Login IoTJunior</h5>
             <form action="" class="mt-3" method="post">
               <div class="mb-3">
                 <label class="form-label">Email address</label>
@@ -27,8 +27,9 @@
                 <label class="form-label">Password</label>
                 <input type="password" name="password" class="form-control" placeholder="**********">
               </div>
-              <button type="submit" class="btn btn-success fw-bold">Sign In</button>
-              <a href="<?= site_url('auth/signup'); ?>" class="btn btn-light">Sign Up</a>
+              <button type="submit" class="btn btn-primary fw-bold">Login</button>
+              <a href="<?= site_url('auth/signup'); ?>" class="btn btn-outline-primary">Ke halaman Daftar</a>
+              <a href="<?= site_url(''); ?>" class="btn btn-light">Batal</a>
             </form>
           </div>
         </div>

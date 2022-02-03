@@ -21,7 +21,7 @@
                 <input type="text" name="title" class="form-control" value="<?= $project->title ?>" id="exampleFormControlInput1" placeholder="<?= $project->title ?>">
               </div>
               <div class="mb-3">
-                <button class="btn btn-success" type="submit">Save</button>
+                <button class="btn btn-primary" type="submit">Save</button>
                 <a href="<?= site_url('project'); ?>" class="btn btn-light" type="submit" >Back</a>
               </div>
             </form>

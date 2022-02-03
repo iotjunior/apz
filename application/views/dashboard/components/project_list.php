@@ -11,9 +11,9 @@
             <h6 class="card-subtitle mb-2 text-muted ">
               <span class=""><?= ucfirst($project->display_name) ?> </span>
             </h6>
-            <p><small>created <?= date("D, d M Y", strtotime($project->created)); ?></small></p>
-            <div class="btn-group">
-              <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+            <p><small>Tanggal <?= date("D, d M Y", strtotime($project->created)); ?></small></p>
+            <div class="btn-group btn-sm">
+              <button type="button" class="btn btn-sm btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
                 <i class="bi bi-gear-fill"></i>
               </button>
               <ul class="dropdown-menu">

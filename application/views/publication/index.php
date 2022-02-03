@@ -19,7 +19,10 @@
           <div class="col-md-3 my-3">
           <div class="card shadow-sm">
               <div class="card-body">
-                <h5 class="card-title text-truncate"><?= $publication->title ?></h5>
+                <h5 class="card-title text-truncate">
+                  <i class="bi bi-journal-code"></i>
+                  <?= $publication->title ?>
+                </h5>
                 <h6 class="card-subtitle mb-2 text-muted">
                   <span class=""><?= ucfirst($publication->display_name) ?> </span>
                   <br />
@@ -31,11 +34,16 @@
                 <p class="text-truncate">
                   <small ><?= $publication->description ?></small>
                 </p>
-                <a href="<?= site_url('publication/clone/' . $publication->id) ?>" class="btn btn-success">
+                <a href="<?= site_url('publication/clone/' . $publication->id) ?>" class="btn btn-sm btn-primary">
                   Clone
                 </a>
                 <?php if ($publication->link_tutorial !== NULL): ?>
-                <a target="_blank" href="<?= $publication->link_tutorial ?>" class="btn btn-outline-success">
+                <a target="_blank" href="<?= $publication->link_tutorial ?>" class="btn btn-sm btn-primary">
+                  Tutorial
+                </a>
+                <?php endif; ?>
+                <?php if ($publication->link_tutorial === NULL): ?>
+                <a href="#" class="btn btn-sm btn-primary disabled">
                   Tutorial
                 </a>
                 <?php endif; ?>

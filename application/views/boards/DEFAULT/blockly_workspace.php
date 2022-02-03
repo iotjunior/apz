@@ -2,7 +2,6 @@
 <script>
 var blocklyArea = document.getElementById("blocklyArea");
 var blocklyDiv = document.getElementById("blocklyDiv");
-var navbarDropdown = document.getElementById('navbarDropdown');
 var linkConnect = document.getElementById("linkConnect");
 var linkSave = document.getElementById("linkSave");
 var pCode = document.getElementById("pCode");
@@ -66,13 +65,10 @@ blocklyWorkspace.addChangeListener(function (event) {
   var xml_latest = <?= $project->block ? $project->block:''; ?>;
 
   if ( xml_latest !== xml_text ) {
-    navbarDropdown.innerHTML = `<span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span> File`;
-    linkSave.innerHTML = `<span class="spinner-grow text-success spinner-grow-sm" role="status" aria-hidden="true"></span> Save`;
+    linkSave.innerHTML = `<span class="spinner-grow text-primary spinner-grow-sm" role="status" aria-hidden="true"></span> <i class="bi bi-save2"></i>`;
     linkConnect.removeAttribute('data-bs-toggle');
     linkConnect.removeAttribute('data-bs-target');
   } else {
-    navbarDropdown.innerHTML = `File`;
-    linkSave.innerHTML = `Save`;
     linkConnect.setAttribute('data-bs-toggle', 'modal');
     linkConnect.setAttribute('data-bs-target', '#modalCompile'); 
   }
@@ -109,8 +105,7 @@ function save() {
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
-        navbarDropdown.innerHTML = `File`;
-        linkSave.innerHTML = `Save`;
+        linkSave.innerHTML = `<i class="bi bi-save2"></i>`;
         linkConnect.setAttribute('data-bs-toggle', 'modal');
         linkConnect.setAttribute('data-bs-target', '#modalCompile'); 
         console.log(this.response);

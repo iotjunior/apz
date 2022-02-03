@@ -29,7 +29,7 @@
                 <input name="link_tutorial" class="form-control" placeholder="Leave a link tutorial here" />
               </div>
               <div class="mb-3">
-                <button class="btn btn-success" type="submit">Publish</button>
+                <button class="btn btn-primary" type="submit">Publish</button>
                 <a href="<?= site_url('project'); ?>" class="btn btn-light" type="submit" >Back</a>
               </div>
             </form>

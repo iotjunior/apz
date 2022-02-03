@@ -35,11 +35,11 @@ class Project extends MY_Controller {
       $config['next_tag_close']   = '</li>';
       $config['last_tag_open']    = '<li class="page-item">';
       $config['last_tag_close']   = '</li>';
-      $config['cur_tag_open']     = '<a class="page-link text-dark bg-success border-success">';
+      $config['cur_tag_open']     = '<a class="page-link text-dark bg-primary border-primary">';
       $config['cur_tag_close']    = '</a>';
       $config['num_tag_open']     = '<li class="page-item">';
       $config['num_tag_close']    = '</li>';
-      $config['data_page_attr']    = 'class="page-link text-dark border-success"';
+      $config['data_page_attr']    = 'class="page-link text-dark border-primary"';
     
       $this->pagination->initialize($config); 
       $page = ($this->uri->segment($config['uri_segment'])) ? $this->uri->segment($config['uri_segment']) : 0;

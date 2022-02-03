@@ -50,11 +50,11 @@
                 <p class="text-truncate">
                   <small ><?= $publication->description ?></small>
                 </p>
-                <a href="<?= site_url('publication/clone/' . $publication->id) ?>" class="btn btn-success">
+                <a href="<?= site_url('publication/clone/' . $publication->id) ?>" class="btn btn-primary">
                   Clone
                 </a>
                 <?php if ($publication->link_tutorial !== NULL): ?>
-                <a target="_blank" href="<?= $publication->link_tutorial ?>" class="btn btn-outline-success">
+                <a target="_blank" href="<?= $publication->link_tutorial ?>" class="btn btn-outline-primary">
                   Tutorial
                 </a>
                 <?php endif; ?>
