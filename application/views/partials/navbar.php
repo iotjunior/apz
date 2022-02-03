@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg shadow navbar-dark bg-primary">
   <div class="container-fluid">
     <a class="navbar-brand text-light" href="<?= site_url(''); ?>">
-      <span class="fw-bold">IoT Junior</span>
+      <span class="fw-bold">IoTJunior</span>
       <span class="fw-light fs-6">1.0.0</span>
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
