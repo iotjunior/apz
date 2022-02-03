@@ -21,21 +21,16 @@
   <div class="modal fade" id="modalCompile" tabindex="-1" aria-labelledby="modalCompile" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Compile ke Microcontroller</h5>
+        <div class="modal-header text-center">
+          <h5 class="modal-title " id="exampleModalLabel">Kode Kompilasi</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <p class="fs-5">
-            Buka aplikasi IoTJunior Plugin di komputer kamu dan salin kode untuk 
+          <p>
+            Buka aplikasi IoTJunior Plugin di komputer kamu dan salin kode berikut untuk 
             mengkompilasi mikrokontroler.
           </p>
-
-          <p class="fs-3 text-primary text-center" id="pCode"></p>
-
-          <button class="btn btn-sm btn-primary mt-3" data-clipboard-action="copy" data-clipboard-target="#pCode">
-            Copy text
-          </button>
+          <input type="text" class="form-control text-center" aria-describedby="button-addon2" id="pCode">
         </div>
       </div>
     </div>

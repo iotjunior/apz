@@ -83,7 +83,7 @@ window.onload = function () {
     localStorage.setItem('code', xml_text);
     var native = Blockly.Arduino.workspaceToCode(blocklyWorkspace);
     localStorage.setItem('native', native);
-    pCode.innerHTML = "<?= $project->code; ?>";
+    pCode.value = "<?= $project->code; ?>";
   }
 }
 
@@ -109,7 +109,7 @@ function save() {
         linkConnect.setAttribute('data-bs-toggle', 'modal');
         linkConnect.setAttribute('data-bs-target', '#modalCompile'); 
         console.log(this.response);
-        pCode.innerHTML = JSON.parse(this.response).code;
+        pCode.value = JSON.parse(this.response).code;
       }
     };
 
