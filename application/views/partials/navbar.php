@@ -1,8 +1,8 @@
 <nav class="navbar navbar-expand-lg shadow navbar-dark bg-primary">
   <div class="container-fluid">
-    <a class="navbar-brand text-light" href="<?= site_url('project'); ?>">
+    <a class="navbar-brand text-light" href="<?= site_url(''); ?>">
       <span class="fw-bold">IoT Junior</span>
-      <span class="fw-light fs-6">(beta)</span>
+      <span class="fw-light fs-6">1.0.0</span>
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -40,7 +40,7 @@
           <button class="btn btn-outline-secondary fw-bold" >Refresh</button>
           &nbsp;
           &nbsp;
-          <button class="btn btn-primary fw-bold" id="openSerial">Open Serial</button>
+          <button class="btn btn-primary fw-bold" id="openSerial">Buka Serial</button>
         <?php endif; ?>
         <?php if ( $controller === 'app' ): ?>
           <div class="btn-group" role="group" aria-label="Basic example">
