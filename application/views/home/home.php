@@ -60,7 +60,7 @@
                 </a>
                 <?php endif; ?>
                 <?php if (!$this->session->userdata("is_authenticated")): ?>
-                <a href="#" class="btn btn-sm btn-secondary disabled">
+                <a href="#" class="btn btn-sm btn-primary disabled">
                   Clone
                 </a>
                 <?php endif; ?>

@@ -7,10 +7,11 @@ class Auth extends MY_Controller {
 	function __construct() {
 		parent::__construct();
 		$this->load->model('user_model');
-    $this->prevent_authentication();
 	}
 
   public function signup() {
+    $this->prevent_authentication();
+
     if ($this->input->server('REQUEST_METHOD') === 'GET') {
       $data["controller"] = "auth";
       $this->load->view('auth/signup', $data);
@@ -28,6 +29,8 @@ class Auth extends MY_Controller {
 	}
 
   public function index() {
+    $this->prevent_authentication();
+
     if ($this->input->server('REQUEST_METHOD') === 'GET') {
       $data["controller"] = "auth";
       $this->load->view('auth/signin', $data);
@@ -49,8 +52,13 @@ class Auth extends MY_Controller {
     }
   }
 
-  public function logout() {
-    $this->session->sess_destroy();
-    redirect('');
+  public function signout() {
+    if ($this->input->server('REQUEST_METHOD') === 'GET') {
+      $data["controller"] = "auth";
+      $this->load->view('auth/signout', $data);
+    } else {
+      $this->session->sess_destroy();
+      redirect('');
+    }
   }
 }
