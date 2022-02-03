@@ -29,7 +29,7 @@ Blockly.Blocks['digital_write'] = {
     this.appendValueInput("pin")
         .setCheck("Number")
         .setAlign(Blockly.ALIGN_RIGHT)
-        .appendField("digitalWrite");
+        .appendField("digital write");
     this.appendValueInput("state")
         .setCheck("Number")
         .setAlign(Blockly.ALIGN_RIGHT)
@@ -48,7 +48,7 @@ Blockly.Blocks['digital_read'] = {
     this.appendValueInput("pin")
         .setCheck("Number")
         .setAlign(Blockly.ALIGN_RIGHT)
-        .appendField("digitalRead");
+        .appendField("digital read");
     this.setInputsInline(true);
     this.setOutput(true, "Number");
     this.setColour(120);
@@ -61,7 +61,7 @@ Blockly.Blocks['digital_read'] = {
 Blockly.Blocks['serial_begin'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField("Serial.begin")
+        .appendField("serial begin")
         .appendField(new Blockly.FieldDropdown([["9600","9600"], ["115200","115200"]]), "baud");
     this.setInputsInline(true);
     this.setPreviousStatement(true, null);
@@ -77,7 +77,7 @@ Blockly.Blocks['serial_println'] = {
   init: function() {
     this.appendValueInput("data")
         .setCheck(null)
-        .appendField("Serial.println");
+        .appendField("serial println");
     this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
@@ -91,7 +91,7 @@ Blockly.Blocks['serial_print'] = {
   init: function() {
     this.appendValueInput("data")
         .setCheck(null)
-        .appendField("Serial.print");
+        .appendField("serial print");
     this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
@@ -105,7 +105,7 @@ Blockly.Blocks['serial_print'] = {
 Blockly.Blocks['serial_available'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField("Serial.available");
+        .appendField("serial avaliable");
     this.setInputsInline(true);
     this.setOutput(true, null);
     this.setColour(120);
@@ -118,7 +118,7 @@ Blockly.Blocks['serial_available'] = {
 Blockly.Blocks['serial_read'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField("Serial.read");
+        .appendField("serial read");
     this.setInputsInline(true);
     this.setOutput(true, null);
     this.setColour(120);
@@ -132,7 +132,7 @@ Blockly.Blocks['analog_write'] = {
   init: function() {
     this.appendValueInput("pin")
         .setCheck("Number")
-        .appendField("analogWrite");
+        .appendField("analog write");
     this.appendValueInput("data")
         .setCheck("Number")
         .appendField("data");
@@ -164,7 +164,7 @@ Blockly.Blocks['pulse_in'] = {
   init: function() {
     this.appendValueInput("pin")
         .setCheck("Number")
-        .appendField("pulseIn");
+        .appendField("pulse in");
     this.appendValueInput("state")
         .setCheck("Number")
         .appendField("state");
@@ -181,7 +181,7 @@ Blockly.Blocks['isnan'] = {
   init: function() {
     this.appendValueInput("value")
         .setCheck("Boolean")
-        .appendField("isnan");
+        .appendField("is nan");
     this.setInputsInline(true);
     this.setOutput(true, "Boolean");
     this.setColour(120);
@@ -208,7 +208,7 @@ Blockly.Blocks['analog_read'] = {
   init: function() {
     this.appendValueInput("pin")
         .setCheck("Number")
-        .appendField("analogRead");
+        .appendField("analog read");
     this.setInputsInline(true);
     this.setOutput(true, "Number");
     this.setColour(120);
@@ -221,7 +221,7 @@ Blockly.Blocks['analog_read'] = {
 Blockly.Blocks['use_millis'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField("millis() interval")
+        .appendField("millis with interval")
         .appendField(new Blockly.FieldTextInput("1000"), "1000")
         .appendField("ms");
     this.appendStatementInput("codes")
@@ -239,7 +239,7 @@ Blockly.Blocks['read_touch'] = {
   init: function() {
     this.appendValueInput("pin")
         .setCheck("Number")
-        .appendField("readTouch");
+        .appendField("read touch");
     this.setInputsInline(true);
     this.setOutput(true, null);
     this.setColour(120);

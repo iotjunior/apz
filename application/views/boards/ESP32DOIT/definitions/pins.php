@@ -226,7 +226,7 @@ Blockly.Blocks['pin_dac'] = {
 Blockly.Blocks['pin_led_builtin'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField("LED_BUILTIN");
+        .appendField("led builtin");
     this.setOutput(true, "Number");
     this.setColour(120);
  this.setTooltip("");

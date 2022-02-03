@@ -4,7 +4,7 @@ Blockly.Blocks['bluetooth_begin'] = {
   init: function() {
     this.appendValueInput("name")
         .setCheck("String")
-        .appendField("SerialBT.begin");
+        .appendField("serial bluetooth begin");
     this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
@@ -17,7 +17,7 @@ Blockly.Blocks['bluetooth_begin'] = {
 Blockly.Blocks['bluetooth_available'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField("SerialBT.available");
+        .appendField("serial bluetooth available");
     this.setInputsInline(true);
     this.setOutput(true, null);
     this.setColour(120);
@@ -29,7 +29,7 @@ Blockly.Blocks['bluetooth_available'] = {
 Blockly.Blocks['bluetooth_read'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField("SerialBT.read");
+        .appendField("serial bluetooth read number");
     this.setInputsInline(true);
     this.setOutput(true, null);
     this.setColour(120);
@@ -42,7 +42,7 @@ Blockly.Blocks['bluetooth_write'] = {
   init: function() {
     this.appendValueInput("data")
         .setCheck("Number")
-        .appendField("SerialBT.write");
+        .appendField("serial bluetooth write");
     this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
@@ -56,7 +56,7 @@ Blockly.Blocks['bluetooth_println'] = {
   init: function() {
     this.appendValueInput("data")
         .setCheck(null)
-        .appendField("SerialBT.println");
+        .appendField("serial bluetooth println");
     this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
@@ -69,7 +69,7 @@ Blockly.Blocks['bluetooth_println'] = {
 Blockly.Blocks['bt_allow_accept_string'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField("SerialBT.allowString");
+        .appendField("serial bluetooth allow string");
     this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
@@ -82,7 +82,7 @@ Blockly.Blocks['bt_allow_accept_string'] = {
 Blockly.Blocks['bluetooth_read_string'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField("SerialBT.readString");
+        .appendField("serial bluetooth read string");
     this.setInputsInline(true);
     this.setOutput(true, null);
     this.setColour(120);

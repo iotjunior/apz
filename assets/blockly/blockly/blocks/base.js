@@ -36,7 +36,7 @@ Blockly.Blocks['base_delay'] = {
   init: function() {
     this.setColour(120);
     this.appendValueInput("DELAY_TIME", 'Number')
-        .appendField("Delay")
+        .appendField("delay")
         .setCheck('Number');
     this.setInputsInline(true);
     this.setPreviousStatement(true, null);
@@ -53,13 +53,12 @@ Blockly.Blocks['base_map'] = {
   init: function() {
     this.setColour(230);
     this.appendValueInput("NUM", 'Number')
-        .appendField("Map ")
+        .appendField("map ")
         .setCheck('Number');
     this.appendValueInput("DMAX", 'Number')
-        .appendField("value to [0-")
+        .appendField("value to 0 until")
         .setCheck('Number');
     this.appendDummyInput()
-	      .appendField("]");
     this.setInputsInline(true);
     this.setOutput(true);
     this.setTooltip('Re-maps a number from [0-1024] to another.');

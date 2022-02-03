@@ -3,7 +3,7 @@ Blockly.Blocks['read_touch'] = {
   init: function() {
     this.appendValueInput("pin")
         .setCheck("Number")
-        .appendField("esp32.readTouch");
+        .appendField("read touch");
     this.setInputsInline(true);
     this.setOutput(true, 'Number');
     this.setColour(120);

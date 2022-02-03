@@ -2,7 +2,7 @@
 Blockly.Blocks['oled_begin'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField("display.begin");
+        .appendField("display begin");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(290);
@@ -14,7 +14,7 @@ Blockly.Blocks['oled_begin'] = {
 Blockly.Blocks['oled_clear'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField("display.clearDisplay");
+        .appendField("display clear");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(290);
@@ -27,7 +27,7 @@ Blockly.Blocks['oled_text_size'] = {
   init: function() {
     this.appendValueInput("NAME")
         .setCheck("Number")
-        .appendField("display.setTextSize");
+        .appendField("display set text size");
     this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
@@ -40,7 +40,7 @@ Blockly.Blocks['oled_text_size'] = {
 Blockly.Blocks['oled_text_color'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField("display.setTextColor")
+        .appendField("display set text color")
         .appendField(new Blockly.FieldDropdown([["WHITE","WHITE"], ["BLUE","BLUE"], ["YELLOW","YELLOW"]]), "color");
     this.setInputsInline(true);
     this.setPreviousStatement(true, null);
@@ -54,7 +54,7 @@ Blockly.Blocks['oled_text_color'] = {
 Blockly.Blocks['oled_cursor'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField("display.setCursor");
+        .appendField("display set cursor");
     this.appendValueInput("x")
         .setCheck("Number")
         .appendField("x");
@@ -74,7 +74,7 @@ Blockly.Blocks['oled_println'] = {
   init: function() {
     this.appendValueInput("NAME")
         .setCheck(null)
-        .appendField("display.println");
+        .appendField("display println");
     this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
@@ -87,7 +87,7 @@ Blockly.Blocks['oled_println'] = {
 Blockly.Blocks['oled_display'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField("display.display");
+        .appendField("display screen");
     this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
@@ -100,7 +100,7 @@ Blockly.Blocks['oled_display'] = {
 Blockly.Blocks['oled_scroll_right'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField("display.startscrollright");
+        .appendField("display start scroll right");
     this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
@@ -113,7 +113,7 @@ Blockly.Blocks['oled_scroll_right'] = {
 Blockly.Blocks['oled_scroll_left'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField("display.startscrollleft");
+        .appendField("display start scroll left");
     this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
@@ -126,7 +126,7 @@ Blockly.Blocks['oled_scroll_left'] = {
 Blockly.Blocks['oled_scroll_diagonal_right'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField("diplay.startscrolldiagright");
+        .appendField("diplay start scroll diagonal right");
     this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
@@ -139,7 +139,7 @@ Blockly.Blocks['oled_scroll_diagonal_right'] = {
 Blockly.Blocks['oled_scroll_diagonal_left'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField("display.startscrolldiagleft");
+        .appendField("display start scroll diagonal left");
     this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
@@ -152,7 +152,7 @@ Blockly.Blocks['oled_scroll_diagonal_left'] = {
 Blockly.Blocks['oled_stop_scroll'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField("display.stopscroll");
+        .appendField("display stop scroll");
     this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
@@ -166,7 +166,7 @@ Blockly.Blocks['oled_print'] = {
   init: function() {
     this.appendValueInput("data")
         .setCheck(null)
-        .appendField("display.print");
+        .appendField("display print");
     this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
@@ -179,7 +179,7 @@ Blockly.Blocks['oled_print'] = {
 Blockly.Blocks['oled_cp437'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField("display.cp437")
+        .appendField("display cp437")
         .appendField(new Blockly.FieldCheckbox("TRUE"), "bool");
     this.setInputsInline(true);
     this.setPreviousStatement(true, null);

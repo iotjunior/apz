@@ -2,7 +2,7 @@
 Blockly.Blocks['wifi_begin'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField("WiFi.begin")
+        .appendField("wifi begin")
         .appendField(new Blockly.FieldTextInput("ssid"), "ssid")
         .appendField(new Blockly.FieldTextInput("password"), "password");
     this.setPreviousStatement(true, null);
@@ -16,7 +16,7 @@ Blockly.Blocks['wifi_begin'] = {
 Blockly.Blocks['wifi_mode'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField("WiFi.mode")
+        .appendField("wifi mode")
         .appendField(new Blockly.FieldDropdown([["Station","WIFI_STA"], ["Access Point","WIFI_AP"]]), "mode");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
@@ -29,7 +29,7 @@ Blockly.Blocks['wifi_mode'] = {
 Blockly.Blocks['wifi_status'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField("WiFi.status");
+        .appendField("wifi status");
     this.setOutput(true, "Number");
     this.setColour(120);
  this.setTooltip("");
@@ -40,7 +40,7 @@ Blockly.Blocks['wifi_status'] = {
 Blockly.Blocks['wifi_local_ip'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField("WiFi.localIP");
+        .appendField("wifi local ip");
     this.setOutput(true, "String");
     this.setColour(120);
  this.setTooltip("");
@@ -51,7 +51,7 @@ Blockly.Blocks['wifi_local_ip'] = {
 Blockly.Blocks['wifi_wl_connected'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField("WL_CONNECTED");
+        .appendField("wl connected");
     this.setOutput(true, "Number");
     this.setColour(120);
  this.setTooltip("");
@@ -62,7 +62,7 @@ Blockly.Blocks['wifi_wl_connected'] = {
 Blockly.Blocks['server_on'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField("server.on")
+        .appendField("server on")
         .appendField(new Blockly.FieldTextInput("/path"), "path")
         .appendField(new Blockly.FieldDropdown([["method GET","HTTP_GET"], ["method POST","HTTP_POST"]]), "method");
     this.appendValueInput("handlers")
@@ -81,7 +81,7 @@ Blockly.Blocks['server_send'] = {
   init: function() {
     this.appendValueInput("data")
         .setCheck("String")
-        .appendField("server.send")
+        .appendField("server send")
         .appendField(new Blockly.FieldDropdown([["200 Ok","200"], ["400 Bad Request","400"], ["404 Not Found","404"]]), "status code")
         .appendField("data");
     this.setInputsInline(true);
@@ -96,7 +96,7 @@ Blockly.Blocks['server_send'] = {
 Blockly.Blocks['server_has_argument'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField("server.has")
+        .appendField("server has")
         .appendField(new Blockly.FieldTextInput("argument"), "arg");
     this.setInputsInline(true);
     this.setOutput(true, "Boolean");
@@ -109,7 +109,7 @@ Blockly.Blocks['server_has_argument'] = {
 Blockly.Blocks['server_argument'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField("server.arg")
+        .appendField("server arg")
         .appendField(new Blockly.FieldTextInput("argument"), "arg");
     this.setInputsInline(true);
     this.setOutput(true, "String");
@@ -122,7 +122,7 @@ Blockly.Blocks['server_argument'] = {
 Blockly.Blocks['server_handle_client'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField("server.handleClient");
+        .appendField("server handle client");
     this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
@@ -136,9 +136,9 @@ Blockly.Blocks['server_argument_to_int'] = {
   init: function() {
     this.appendValueInput("argument")
         .setCheck("String")
-        .appendField("");
+        .appendField("argument");
     this.appendDummyInput()
-        .appendField("to_int");
+        .appendField("to number");
     this.setInputsInline(true);
     this.setOutput(true, "Number");
     this.setColour(120);
@@ -150,7 +150,7 @@ Blockly.Blocks['server_argument_to_int'] = {
 Blockly.Blocks['server_begin'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField("server.begin");
+        .appendField("server begin");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(290);
