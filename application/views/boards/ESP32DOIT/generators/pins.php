@@ -36,7 +36,7 @@ Blockly.Arduino['pin_pwm'] = function(block) {
   }
   var dropdown_pins = block.getFieldValue('pins');
   var code = dropdown_pins;
-  return [code, Blockly.Arduino.ORDER_UNARY_PREFIX];
+  return [code, Blockly.Arduino.ORDER_UNARY_POSTFIX];
 };
 
 
