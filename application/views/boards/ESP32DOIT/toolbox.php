@@ -183,6 +183,8 @@
   </category>
   <category name="Text">
     <block type="text"></block>
+    <block type="convert_number_to_string"></block>
+    <block type="c_string"></block>
   </category>
   
   <category name="Variables" custom="VARIABLE"></category>
