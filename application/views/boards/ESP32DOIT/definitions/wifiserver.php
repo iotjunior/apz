@@ -59,31 +59,34 @@ Blockly.Blocks['wifi_wl_connected'] = {
   }
 };
 
+
 Blockly.Blocks['server_on'] = {
   init: function() {
     this.appendDummyInput()
         .appendField("server on")
-        .appendField(new Blockly.FieldTextInput("/path"), "path")
-        .appendField(new Blockly.FieldDropdown([["method GET","HTTP_GET"], ["method POST","HTTP_POST"]]), "method");
-    this.appendValueInput("handlers")
-        .setCheck("Function")
-        .appendField("handler");
+        .appendField(new Blockly.FieldTextInput("/path"), "path");
+    this.appendDummyInput()
+        .appendField("method")
+        .appendField(new Blockly.FieldDropdown([["GET","HTTP_GET"], ["POST","HTTP_POST"]]), "method");
+    this.appendStatementInput("codes")
+        .setCheck(null);
     this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setColour(290);
+    this.setColour(65);
  this.setTooltip("");
  this.setHelpUrl("");
   }
 };
 
-Blockly.Blocks['server_send'] = {
+Blockly.Blocks['request_send_text'] = {
   init: function() {
-    this.appendValueInput("data")
+    this.appendValueInput("text")
         .setCheck("String")
-        .appendField("server send")
-        .appendField(new Blockly.FieldDropdown([["200 Ok","200"], ["400 Bad Request","400"], ["404 Not Found","404"]]), "status code")
-        .appendField("data");
+        .appendField("request send text");
+    this.appendDummyInput()
+        .appendField("status code")
+        .appendField(new Blockly.FieldDropdown([["200 OK","200"], ["400 BAD REQUEST","400"], ["404 NOT FOUND","404"]]), "status_code");
     this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
@@ -93,24 +96,42 @@ Blockly.Blocks['server_send'] = {
   }
 };
 
-Blockly.Blocks['server_has_argument'] = {
+// Blockly.Blocks['request_send_html'] = {
+//   init: function() {
+//     this.appendDummyInput()
+//         .appendField("request send html")
+//         .appendField(new Blockly.FieldTextInput("page_name"), "page");
+//     this.appendDummyInput()
+//         .appendField("status code")
+//         .appendField(new Blockly.FieldDropdown([["200 OK","200"], ["400 BAD REQUEST","400"], ["404 NOT FOUND","404"]]), "status_code");
+//     this.setInputsInline(true);
+//     this.setPreviousStatement(true, null);
+//     this.setNextStatement(true, null);
+//     this.setColour(290);
+//  this.setTooltip("");
+//  this.setHelpUrl("");
+//   }
+// };
+
+Blockly.Blocks['request_has_param'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField("server has")
-        .appendField(new Blockly.FieldTextInput("argument"), "arg");
+        .appendField("request has")
+        .appendField(new Blockly.FieldTextInput("param"), "param");
     this.setInputsInline(true);
-    this.setOutput(true, "Boolean");
+    this.setOutput(true, null);
     this.setColour(120);
  this.setTooltip("");
  this.setHelpUrl("");
   }
 };
 
-Blockly.Blocks['server_argument'] = {
+Blockly.Blocks['request_get_param_text'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField("server arg")
-        .appendField(new Blockly.FieldTextInput("argument"), "arg");
+        .appendField("request get")
+        .appendField(new Blockly.FieldTextInput("param"), "param")
+        .appendField("to text");
     this.setInputsInline(true);
     this.setOutput(true, "String");
     this.setColour(120);
@@ -119,25 +140,11 @@ Blockly.Blocks['server_argument'] = {
   }
 };
 
-Blockly.Blocks['server_handle_client'] = {
+Blockly.Blocks['request_get_param_number'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField("server handle client");
-    this.setInputsInline(true);
-    this.setPreviousStatement(true, null);
-    this.setNextStatement(true, null);
-    this.setColour(290);
- this.setTooltip("");
- this.setHelpUrl("");
-  }
-};
-
-Blockly.Blocks['server_argument_to_int'] = {
-  init: function() {
-    this.appendValueInput("argument")
-        .setCheck("String")
-        .appendField("argument");
-    this.appendDummyInput()
+        .appendField("request get")
+        .appendField(new Blockly.FieldTextInput("param"), "param")
         .appendField("to number");
     this.setInputsInline(true);
     this.setOutput(true, "Number");
@@ -151,6 +158,7 @@ Blockly.Blocks['server_begin'] = {
   init: function() {
     this.appendDummyInput()
         .appendField("server begin");
+    this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(290);

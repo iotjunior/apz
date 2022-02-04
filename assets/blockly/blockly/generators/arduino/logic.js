@@ -39,14 +39,6 @@ Blockly.Arduino.controls_if = function(block) {
     return '';
   }
 
-  if (!validatorEmpty(block, argument)) {
-    return '';
-  }
-
-  if (!validatorEmpty(block, branch)) {
-    return '';
-  }
-
   var code = 'if (' + argument + ') {\n' + branch + '\n}';
   for (n = 1; n <= this.elseifCount_; n++) {
     argument = Blockly.Arduino.valueToCode(this, 'IF' + n,
