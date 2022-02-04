@@ -51,7 +51,7 @@ Blockly.Arduino.base_map = function(block) {
   if (!validatorEmpty(block, value_num)) {
     return '';
   }
-  var code = 'map(' + value_num + ', 0, 4095, 0, ' + value_dmax + ')';
+  var code = 'map(' + value_num + ', 0, 1023, 0, ' + value_dmax + ')';
   return [code, Blockly.Arduino.ORDER_NONE];
 };
 
