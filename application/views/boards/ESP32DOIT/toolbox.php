@@ -107,25 +107,38 @@
       <field name="ssid">ssid</field>
       <field name="password">password</field>
     </block>
+    
     <block type="server_on">
       <field name="path">/path</field>
       <field name="method">HTTP_GET</field>
     </block>
-    <block type="server_begin"></block>
-    <block type="server_send">
-      <field name="status code">200</field>
+    <block type="request_send_text">
+      <field name="status_code">200</field>
+      <value name="text">
+        <block type="text">
+          <field name="TEXT">Hello</field>
+        </block>
+      </value>
     </block>
-    <block type="server_handle_client"></block>
+    <!-- <block type="request_send_html">
+      <field name="page">page_name</field>
+      <field name="status_code">200</field>
+    </block> -->
+    <block type="server_begin"></block>
+    <block type="request_has_param">
+      <field name="param">param</field>
+    </block>
+
     <block type="wifi_status"></block>
     <block type="wifi_local_ip"></block>
     <block type="wifi_wl_connected"></block>
-    <block type="server_has_argument">
-      <field name="arg">argument</field>
+    
+    <block type="request_get_param_text">
+      <field name="param">param</field>
     </block>
-    <block type="server_argument">
-      <field name="arg">argument</field>
+    <block type="request_get_param_number">
+      <field name="param">param</field>
     </block>
-    <block type="server_argument_to_int"></block>
   </category>
   <category name="Logic">
     <block type="controls_if"></block>
