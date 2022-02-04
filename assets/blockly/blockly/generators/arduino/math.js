@@ -33,13 +33,13 @@ Blockly.Arduino.math_number = function(block) {
   var code = window.parseFloat(this.getFieldValue('NUM'));
   // -4.abs() returns -4 in Dart due to strange order of operation choices.
   // -4 is actually an operator and a number.  Reflect this in the order.
-  if (!validatorAll(block)) {
-    return '';
-  }
+  // if (!validatorAll(block)) {
+  //   return '';
+  // }
 
-  if (!validatorEmpty(block, code)) {
-    return '';
-  }
+  // if (!validatorEmpty(block, code)) {
+  //   return '';
+  // }
 
   var order = code < 0 ?
       Blockly.Arduino.ORDER_UNARY_PREFIX : Blockly.Arduino.ORDER_ATOMIC;
