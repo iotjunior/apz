@@ -2,89 +2,13 @@
 
 
 
-// function validatorSetup(block, message="Please add this statement into setup!") {
-//   var type = block.getRootBlock().type
-//   if (type === 'setup') {
-//     block.setWarningText(null);
-//     return true;
-//   } else {
-//     block.setWarningText(message);
-//     return false;
-//   }
-// }
-
-
-// function validatorForever(block, message="Please add this statement into forever!") {
-//   var type = block.getRootBlock().type
-//   if (type === 'forever') {
-//     block.setWarningText(null);
-//     return true;
-//   } else {
-//     block.setWarningText(message);
-//     return false;
-//   }
-// }
-
-// function validatorSetupForever(block, message="Please add this statement into setup or forever!") {
-//   var type = block.getRootBlock().type
-//   if (type === 'forever' || type === 'setup') {
-//     block.setWarningText(null);
-//     return true;
-//   } else {
-//     block.setWarningText(message);
-//     return false;
-//   }
-// }
-
-
-// function validatorEmpty(block, value, message="Please complete this block with the appropriate value.") {
-//   if (value) {
-//     block.setWarningText(null);
-//     return true;
-//   } else {
-//     block.setWarningText(message);
-//     return false;
-//   }
-// }
-
-
-// function validatorFunction(block, message="Please add this statement into procedure with return value!") {
-//   var type = block.getRootBlock().type
-//   if (type === 'procedures_defreturn') {
-//     block.setWarningText(null);
-//     return true;
-//   } else {
-//     block.setWarningText(message);
-//     return false;
-//   }
-// }
-
-
-// function validatorAll(block, message="Please add this statement into setup, forever or functions!") {
-//   var type = block.getRootBlock().type
-//   if (type === 'forever' || type === 'setup' || type === 'procedures_defreturn') {
-//     block.setWarningText(null);
-//     return true;
-//   } else {
-//     block.setWarningText(message);
-//     return false;
-//   }
-// }
-
-
-
-
-/**
- * For development content docs!
- */
-
 function validatorSetup(block, message="Please add this statement into setup!") {
   var type = block.getRootBlock().type
   if (type === 'setup') {
-    // block.setWarningText(null);
+    block.setWarningText(null);
     return true;
   } else {
-    // block.setWarningText(message);
+    block.setWarningText(message);
     return false;
   }
 }
@@ -93,22 +17,21 @@ function validatorSetup(block, message="Please add this statement into setup!") 
 function validatorForever(block, message="Please add this statement into forever!") {
   var type = block.getRootBlock().type
   if (type === 'forever') {
-    // block.setWarningText(null);
+    block.setWarningText(null);
     return true;
   } else {
-    // block.setWarningText(message);
+    block.setWarningText(message);
     return false;
   }
 }
 
-
 function validatorSetupForever(block, message="Please add this statement into setup or forever!") {
   var type = block.getRootBlock().type
   if (type === 'forever' || type === 'setup') {
-    // block.setWarningText(null);
+    block.setWarningText(null);
     return true;
   } else {
-    // block.setWarningText(message);
+    block.setWarningText(message);
     return false;
   }
 }
@@ -116,10 +39,10 @@ function validatorSetupForever(block, message="Please add this statement into se
 
 function validatorEmpty(block, value, message="Please complete this block with the appropriate value.") {
   if (value) {
-    // block.setWarningText(null);
+    block.setWarningText(null);
     return true;
   } else {
-    // block.setWarningText(message);
+    block.setWarningText(message);
     return false;
   }
 }
@@ -128,10 +51,10 @@ function validatorEmpty(block, value, message="Please complete this block with t
 function validatorFunction(block, message="Please add this statement into procedure with return value!") {
   var type = block.getRootBlock().type
   if (type === 'procedures_defreturn') {
-    // block.setWarningText(null);
+    block.setWarningText(null);
     return true;
   } else {
-    // block.setWarningText(message);
+    block.setWarningText(message);
     return false;
   }
 }
@@ -140,11 +63,88 @@ function validatorFunction(block, message="Please add this statement into proced
 function validatorAll(block, message="Please add this statement into setup, forever or functions!") {
   var type = block.getRootBlock().type
   if (type === 'forever' || type === 'setup' || type === 'procedures_defreturn') {
-    // block.setWarningText(null);
+    block.setWarningText(null);
     return true;
   } else {
-    // block.setWarningText(message);
+    block.setWarningText(message);
     return false;
   }
 }
+
+
+
+
+/**
+ * For development content docs!
+ */
+
+// function validatorSetup(block, message="Please add this statement into setup!") {
+//   var type = block.getRootBlock().type
+//   if (type === 'setup') {
+//     // block.setWarningText(null);
+//     return true;
+//   } else {
+//     // block.setWarningText(message);
+//     return false;
+//   }
+// }
+
+
+// function validatorForever(block, message="Please add this statement into forever!") {
+//   var type = block.getRootBlock().type
+//   if (type === 'forever') {
+//     // block.setWarningText(null);
+//     return true;
+//   } else {
+//     // block.setWarningText(message);
+//     return false;
+//   }
+// }
+
+
+// function validatorSetupForever(block, message="Please add this statement into setup or forever!") {
+//   var type = block.getRootBlock().type
+//   if (type === 'forever' || type === 'setup') {
+//     // block.setWarningText(null);
+//     return true;
+//   } else {
+//     // block.setWarningText(message);
+//     return false;
+//   }
+// }
+
+
+// function validatorEmpty(block, value, message="Please complete this block with the appropriate value.") {
+//   if (value) {
+//     // block.setWarningText(null);
+//     return true;
+//   } else {
+//     // block.setWarningText(message);
+//     return false;
+//   }
+// }
+
+
+// function validatorFunction(block, message="Please add this statement into procedure with return value!") {
+//   var type = block.getRootBlock().type
+//   if (type === 'procedures_defreturn') {
+//     // block.setWarningText(null);
+//     return true;
+//   } else {
+//     // block.setWarningText(message);
+//     return false;
+//   }
+// }
+
+
+// function validatorAll(block, message="Please add this statement into setup, forever or functions!") {
+//   var type = block.getRootBlock().type
+//   if (type === 'forever' || type === 'setup' || type === 'procedures_defreturn') {
+//     // block.setWarningText(null);
+//     return true;
+//   } else {
+//     // block.setWarningText(message);
+//     return false;
+//   }
+// }
 </script>
