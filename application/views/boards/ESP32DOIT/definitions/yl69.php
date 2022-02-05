@@ -3,7 +3,7 @@ Blockly.Blocks['yl_69_get_soil_moisture_in_percent'] = {
   init: function() {
     this.appendValueInput("pin")
         .setCheck("Number")
-        .appendField("yl69.getMoisture (%) with pin");
+        .appendField("yl69 soil moisture (%) with pin");
     this.setInputsInline(true);
     this.setOutput(true, null);
     this.setColour(120);
