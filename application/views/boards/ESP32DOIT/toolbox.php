@@ -100,6 +100,10 @@
     <block type="bluetooth_read_string"></block>
   </category>
   <category name="WiFi &amp; Server">
+    <block type="server_on">
+      <field name="path">path</field>
+      <field name="method">HTTP_GET</field>
+    </block>
     <block type="wifi_mode">
       <field name="mode">WIFI_STA</field>
     </block>
@@ -108,10 +112,7 @@
       <field name="password">password</field>
     </block>
     
-    <block type="server_on">
-      <field name="path">/path</field>
-      <field name="method">HTTP_GET</field>
-    </block>
+    
     <block type="request_send_text">
       <field name="status_code">200</field>
       <value name="text">
@@ -124,7 +125,7 @@
       <field name="page">page_name</field>
       <field name="status_code">200</field>
     </block> -->
-    <block type="server_begin"></block>
+    <!-- <block type="server_begin"></block> -->
     <block type="request_has_param">
       <field name="param">param</field>
     </block>

@@ -91,30 +91,35 @@ Blockly.Arduino['server_on'] = function(block) {
   var dropdown_method = block.getFieldValue('method');
   var statements_codes = Blockly.Arduino.statementToCode(block, 'codes');
   
-  if (!validatorSetup(block)) { return ''; }
   if (!validatorEmpty(block, text_path)) { return ''; }
   if (!validatorEmpty(block, dropdown_method)) { return ''; }
   if (!validatorEmpty(block, statements_codes)) { return ''; }
 
   serverBegin();
-  // text_path = text_path.replace("/", " ");
-  // text_path = text_path.split(" ");
-  // text_path = text_path.join("/");
-  // text_path = text_path.replace(" ", "").toLowerCase();
-
+  
   var code = `
 server.on("${text_path}", ${dropdown_method}, [](AsyncWebServerRequest *request){
   ${statements_codes}
 });
   `;
-  return code;
+
+  
+  if ( Blockly.Arduino.setups_['server_begin'] ) {
+    delete Blockly.Arduino.setups['server_begin'];
+  }
+
+  Blockly.Arduino.setups_[`server_on_${text_path}_${dropdown_method}`] = code;
+  Blockly.Arduino.setups_['server_begin'] = "server.begin();";
+
+  return '';
 };
 
 Blockly.Arduino['request_send_text'] = function(block) {
   var value_text = Blockly.Arduino.valueToCode(block, 'text', Blockly.Arduino.ORDER_ATOMIC);
   var dropdown_status_code = block.getFieldValue('status_code');
   
-  if (!validatorSetup(block)) { return ''; }
+  if (!validatorServerOn(block)) { return ''; }
+
   if (!validatorEmpty(block, value_text)) { return ''; }
   if (!validatorEmpty(block, dropdown_status_code)) { return ''; }
   
@@ -122,21 +127,10 @@ Blockly.Arduino['request_send_text'] = function(block) {
   return code;
 };
 
-/**
-Version 1.0.0 is not available this feature.
- */
-// Blockly.Arduino['request_send_html'] = function(block) {
-//   var text_page = block.getFieldValue('page');
-//   var dropdown_status_code = block.getFieldValue('status_code');
-//   // TODO: Assemble Arduino into code variable.
-//   var code = '...;\n';
-//   return code;
-// };
-
 
 Blockly.Arduino['request_has_param'] = function(block) {
   var text_param = block.getFieldValue('param');
-  if (!validatorSetup(block)) { return ''; }
+  if (!validatorServerOn(block)) { return ''; }
   if (!validatorEmpty(block, text_param)) { return ''; }
 
   var code = `request->hasParam("${text_param}")`;
@@ -145,7 +139,7 @@ Blockly.Arduino['request_has_param'] = function(block) {
 
 Blockly.Arduino['request_get_param_text'] = function(block) {
   var text_param = block.getFieldValue('param');
-  if (!validatorSetup(block)) { return ''; }
+  if (!validatorServerOn(block)) { return ''; }
   if (!validatorEmpty(block, text_param)) { return ''; }
   var code = `request->getParam("${text_param}")->value()`;
   return [code, Blockly.Arduino.ORDER_UNARY_POSTFIX];
@@ -153,16 +147,10 @@ Blockly.Arduino['request_get_param_text'] = function(block) {
 
 Blockly.Arduino['request_get_param_number'] = function(block) {
   var text_param = block.getFieldValue('param');
-  if (!validatorSetup(block)) { return ''; }
+  if (!validatorServerOn(block)) { return ''; }
   if (!validatorEmpty(block, text_param)) { return ''; }
   var code = `request->getParam("${text_param}")->value().toInt()`;
   return [code, Blockly.Arduino.ORDER_UNARY_POSTFIX];
-};
-
-Blockly.Arduino['server_begin'] = function(block) {
-  if (!validatorSetup(block)) { return ''; }
-  var code = 'server.begin();\n';
-  return code;
 };
 
 </script>
