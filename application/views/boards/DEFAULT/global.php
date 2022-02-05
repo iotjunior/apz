@@ -25,6 +25,17 @@ function validatorForever(block, message="Please add this statement into forever
   }
 }
 
+function validatorServerOn(block, message="Please add this statement into server on event!") {
+  var type = block.getRootBlock().type
+  if (type === 'server_on') {
+    block.setWarningText(null);
+    return true;
+  } else {
+    block.setWarningText(message);
+    return false;
+  }
+}
+
 function validatorSetupForever(block, message="Please add this statement into setup or forever!") {
   var type = block.getRootBlock().type
   if (type === 'forever' || type === 'setup') {

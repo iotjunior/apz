@@ -60,19 +60,48 @@ Blockly.Blocks['wifi_wl_connected'] = {
 };
 
 
+// Blockly.Blocks['server_on'] = {
+//   init: function() {
+//     this.appendDummyInput()
+//         .appendField("server on")
+//         .appendField(new Blockly.FieldTextInput("/path"), "path");
+//     this.appendDummyInput()
+//         .appendField("method")
+//         .appendField(new Blockly.FieldDropdown([["GET","HTTP_GET"], ["POST","HTTP_POST"]]), "method");
+//     this.appendStatementInput("codes")
+//         .setCheck(null);
+//     this.setInputsInline(true);
+//     this.setPreviousStatement(true, null);
+//     this.setNextStatement(true, null);
+//     this.setColour(65);
+//  this.setTooltip("");
+//  this.setHelpUrl("");
+//   }
+// };
+
+
 Blockly.Blocks['server_on'] = {
   init: function() {
+    var validator = function(newValue) {
+      newValue = newValue.replace("/", " ");
+      newValue = newValue.split(" ");
+      newValue = newValue.join("/");
+      newValue = newValue.replace(" ", "").toLowerCase();
+
+      if (newValue[0] === "/") {
+        return newValue;
+      } else {
+        return `/${newValue}`;
+      }
+    };
+
     this.appendDummyInput()
         .appendField("server on")
-        .appendField(new Blockly.FieldTextInput("/path"), "path");
-    this.appendDummyInput()
+        .appendField(new Blockly.FieldTextInput("path", validator), "path")
         .appendField("method")
         .appendField(new Blockly.FieldDropdown([["GET","HTTP_GET"], ["POST","HTTP_POST"]]), "method");
     this.appendStatementInput("codes")
         .setCheck(null);
-    this.setInputsInline(true);
-    this.setPreviousStatement(true, null);
-    this.setNextStatement(true, null);
     this.setColour(65);
  this.setTooltip("");
  this.setHelpUrl("");
@@ -154,16 +183,4 @@ Blockly.Blocks['request_get_param_number'] = {
   }
 };
 
-Blockly.Blocks['server_begin'] = {
-  init: function() {
-    this.appendDummyInput()
-        .appendField("server begin");
-    this.setInputsInline(true);
-    this.setPreviousStatement(true, null);
-    this.setNextStatement(true, null);
-    this.setColour(290);
- this.setTooltip("");
- this.setHelpUrl("");
-  }
-};
 </script>
