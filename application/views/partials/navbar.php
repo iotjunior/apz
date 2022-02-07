@@ -52,13 +52,13 @@
         <?php if ( $controller === 'app' ): ?>
           <div class="btn-group" role="group" aria-label="Basic example">
             <a href="<?= site_url('project'); ?>" class="btn btn-secondary text-light">
-              <i class="bi bi-x-square"></i>
+              <i class="bi bi-x-square"></i> Exit
             </a>
             <button type="button" title="Connect" class="btn btn-danger text-light" id="linkConnect">
-              <i class="bi bi-cloud-arrow-down"></i>
+              <i class="bi bi-cloud-arrow-down"></i> Connect
             </button>
             <button id="linkSave" onclick="save()" title="Simpan project" type="button" class="btn btn-danger text-light">
-              <i class="bi bi-save2"></i>
+              <i class="bi bi-save2"></i> Simpan
             </button>
           </div>
         
